@@ -1,11 +1,11 @@
 import {Schema, model} from "mongoose";
 
-const inventario = new Schema<IInventario>({
+const inventario = new Schema({
     descripcion : "String",
     cantidad : "Number"
 })
 
-const registroInventario = new Schema<IRegistroInventario>({
+const registroInventario = new Schema({
     fecha : "Date",
     inventario : {
         type : Schema.Types.ObjectId,

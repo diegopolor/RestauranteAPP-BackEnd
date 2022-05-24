@@ -8,11 +8,14 @@ const categoriaProductos = new Schema ({
 const producto = new Schema({
     nombre : "String",
     descripcion : "String",
-    categoria : "String",
+    categoria : {
+        type: Schema.Types.ObjectId,
+        ref: 'CategoriaProducto'
+    },
     imagen : "String",
     precio : "Number",
     items : [{item : "String"}]
 })
 
 export const productoModel = model('producto', producto)
-export const categoriaProductosModel = model('CategoriaProducto', categoriaProductos)
+export const categoriaProductosModel = model('categoriaProducto', categoriaProductos)

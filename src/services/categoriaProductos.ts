@@ -19,5 +19,5 @@ export const listCategorias = async()=>{
         console.log(err);
         return false
     }
-
 }
+

@@ -1,6 +1,6 @@
 import { productoModel } from '../model/productos'
 
- const listAllProductos = async ()=>{
+export const listAllProductos = async ()=>{
     try{
         const data = await productoModel.find()
         return data
@@ -10,7 +10,7 @@ import { productoModel } from '../model/productos'
     }   
 }
 
- const saveProducto = async(data: any)=>{
+export const saveProducto = async(data: any)=>{
     try {
         const producto = new productoModel(data)
         const save = await producto.save()
@@ -21,10 +21,6 @@ import { productoModel } from '../model/productos'
     }
 }
 
-export {
-    listAllProductos,
-    saveProducto
-}
 
 
 
