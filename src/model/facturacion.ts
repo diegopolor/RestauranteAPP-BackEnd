@@ -1,5 +1,6 @@
 import {Schema, model} from "mongoose";
 
+
 const facturacion = new Schema<IFacturacion>({
     fecha : "Date",
     ordenes : [

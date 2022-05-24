@@ -23,7 +23,7 @@ export const DBConnect =  () =>{
   })    
 }
 
-export const DBCloseConnect = ()=>{
+export const DBCloseConnection = ()=>{
     mongoose.connection.close().then(()=>{
         console.log('Desconexión exitosa.');
     }).catch((err)=>{

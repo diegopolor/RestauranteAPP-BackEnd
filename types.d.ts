@@ -1,5 +1,7 @@
 
-type RegistroInv = "entrada" | "salida" //tipo para el registro de inventarios
+type RegistroInv = "entrada" | "salida"//tipo para el registro de inventarios
+type categoria = ICategoriaProductos
+type productos = IProductos
 
 //--- Interfaces de modelo de base de datos --- //
 
