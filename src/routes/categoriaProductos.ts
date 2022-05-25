@@ -15,7 +15,7 @@ routeCategoriaP.get('/', async (req, res)=>{
 //guardar
 routeCategoriaP.post('/', async(req, res)=>{
     const data  = req.body
-    const save = await saveData(data, categoriaProductosModel) 
+    const save = await saveData( data, categoriaProductosModel) 
     reponseHTTPApi(res, 200, save)
 })
 

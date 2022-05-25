@@ -3,9 +3,8 @@ import { config } from 'dotenv'
 import 'colors'
 
 config()
-const NameDB = "AppRestaurante"
-const ConnectionURI = 
-`mongodb+srv://${process.env.USERMNONGODB}:${process.env.PASSWORDMONGODB}@cluster0.hqukg.mongodb.net/${NameDB}?retryWrites=true&w=majority`
+const ConnectionURI : string = 
+`mongodb+srv://${process.env.USERMNONGODB}:${process.env.PASSWORDMONGODB}@${process.env.HOSTMONGODB}/${process.env.NAMEDB}?retryWrites=true&w=majority`
 
 export const DBConnect =  () =>{
   mongoose.connect(ConnectionURI)
