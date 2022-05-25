@@ -5,7 +5,7 @@ type productos = IProductos
 
 //--- Interfaces de modelo de base de datos --- //
 
-interface IProductos {
+export declare interface IProductos {
     nombre : string,
     descripcion : string,
     categoria : { }
@@ -14,36 +14,36 @@ interface IProductos {
     items : []
 }
 
-interface ICategoriaProductos {
+export interface ICategoriaProductos {
     nombre : string,
     imagen : string
 }
 
-interface IInventario {
+export interface IInventario {
     descripcion : string,
     cantidad : number
 }
 
-interface IRegistroInventario{
+export interface IRegistroInventario{
     fecha : string,
     inventario : string,
     tipo : RegistroInv,
     cantidad : number
 }
 
-interface IFacturacion {
+export interface IFacturacion {
     fecha : string,
     ordenes : []
 }
 
-interface IOrden {
+export interface IOrden {
     fecha : string,
     estado : string,
     productos : [],
     valorTotal : number 
 }
 
-interface IUsuario {
+export interface IUsuario {
     usuario : string,
     clave : string,
     correo : string,
@@ -51,6 +51,6 @@ interface IUsuario {
     rol : string
 }
 
-interface IRolUsuario {
+export interface IRolUsuario {
     nombre : string
 }

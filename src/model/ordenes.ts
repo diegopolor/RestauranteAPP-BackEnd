@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose'
+import { IOrden } from '../../types'
 
 const ordenes = new Schema<IOrden>({
     fecha : "Date",

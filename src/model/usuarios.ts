@@ -1,4 +1,5 @@
 import {Schema, model} from "mongoose";
+import { IRolUsuario, IUsuario } from "../../types";
 
 const rolesUsuarios = new Schema<IRolUsuario>({
     nombre  : "String"

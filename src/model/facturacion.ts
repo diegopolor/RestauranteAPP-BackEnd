@@ -1,5 +1,5 @@
 import {Schema, model} from "mongoose";
-
+import { IFacturacion } from "../../types";
 
 const facturacion = new Schema<IFacturacion>({
     fecha : "Date",

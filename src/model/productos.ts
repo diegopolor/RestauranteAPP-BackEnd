@@ -1,11 +1,12 @@
 import {Schema, model} from "mongoose";
+import { IProductos, ICategoriaProductos } from "../../types";
 
-const categoriaProductos = new Schema ({
+const categoriaProductos = new Schema<ICategoriaProductos> ({
     nombre : "String",
     imagen : "String"
 })
 
-const producto = new Schema({
+const producto = new Schema<IProductos>({
     nombre : "String",
     descripcion : "String",
     categoria : {
