@@ -1,13 +1,26 @@
 import { Router } from "express";
-import {reponseHTTPApi} from "../utils/request"
-import { listData } from "../services/crud";
+import { listInfo, saveInfo, updateInfo, deleteInfo } from "../utils/crud";
 
 import { inventarioModel } from "../model/inventarios";
 
 export const routeInventarios = Router()
 
 //listar
-routeInventarios.get('/', async(req, res)=>{
-    const data = await listData(inventarioModel)
-    reponseHTTPApi(res, 200, data) 
+routeInventarios.get('/', async(_req, res)=>{
+    listInfo(res, inventarioModel)
 })
+
+//guardar
+routeInventarios.post('/', async(req, res)=>{
+    saveInfo(res, req, inventarioModel)
+})
+
+//actualizar
+routeInventarios.put('/:id', async(req, res)=>{
+    updateInfo(req, res, inventarioModel)
+})
+
+routeInventarios.put('/:id', async(req, res)=>{
+    deleteInfo(req, res, inventarioModel)
+})
+
