@@ -6,6 +6,7 @@
   "types": "./src/index.d.ts",
   "scripts": {
     "tsc": "tsc",
+    "lint": "ts-standard",
     "dev": "ts-node-dev ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,8 +31,6 @@
     "parserOptions": {
       "project": "./tsconfig.json"
     },
-    "extends": [
-      "./node_modules/ts-standard/eslintrc.json"
-    ]
+    "extends": ["./node_modules/ts-standard/eslintrc.json"]
   }
 }
